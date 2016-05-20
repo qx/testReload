@@ -1,0 +1,22 @@
+<p id="notice"><%= notice %></p>
+<h1>nowayw</h1>
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @arcitles.each do |arcitle| %>
+      <tr>
+        <td><%= arcitle.title %></td>
+        <td><%= link_to 'Show', arcitle %></td>
+        <td><%= link_to 'Edit', edit_arcitle_path(arcitle) %></td>
+        <td><%= link_to 'Destroy', arcitle, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<br>
+<%= link_to 'New Arcitle', new_arcitle_path %>
